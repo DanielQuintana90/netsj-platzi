@@ -8,6 +8,7 @@ import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
 
 import { environments } from './enviroments';
+import { DatabaseModule } from './database/database.module';
 import config from './config';
 
 @Module({
@@ -24,6 +25,7 @@ import config from './config';
         DATABASE_PORT: Joi.number().required(),
       }),
     }),
+    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
